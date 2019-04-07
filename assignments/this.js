@@ -41,10 +41,28 @@ const person = {
     }
 }
 console.log(person.speak());
+
 // Principle 3
 
 // code example for New Binding
 
+
+
 // Principle 4
 
 // code example for Explicit Binding
+
+const priya = {
+    name: 'Priya'
+}
+const traits = ['smart', 'funny', 'creative'];
+
+function introduce(traits1, traits2, traits3) {
+    console.log(`Hi, my name is ${this.name} and I am ${traits1}, ${traits2}, and ${traits3}`);
+}
+
+// introduce.call(priya, traits[0], traits[1], traits[2]);
+// introduce.apply(priya, traits);
+
+const introduceMe = introduce.bind(priya, ...traits);
+// introduceMe();
