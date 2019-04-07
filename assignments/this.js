@@ -26,11 +26,21 @@
 function window(param) {
     console.log(this)
 }
-window();
+// window();
+
 // Principle 2
 
 // code example for Implicit Binding
 
+const person = {
+    name: 'Priya',
+    age: 20,
+    food: 'pizza',
+    speak() {
+        return `${this.name} loves to eat ${this.food}`;
+    }
+}
+console.log(person.speak());
 // Principle 3
 
 // code example for New Binding
