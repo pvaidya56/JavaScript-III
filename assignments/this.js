@@ -15,7 +15,7 @@
 * 4. New Binding
 *   This is using the 'new' keyword to create an object from a constructor. 
     Constructor methods are preferred for reusability.
-    
+
 * write out a code example of each explanation above
 */
 
@@ -23,6 +23,10 @@
 
 // code example for Window Binding
 
+function window(param) {
+    console.log(this)
+}
+window();
 // Principle 2
 
 // code example for Implicit Binding
