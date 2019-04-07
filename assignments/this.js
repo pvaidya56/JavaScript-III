@@ -46,8 +46,21 @@ console.log(person.speak());
 
 // code example for New Binding
 
+function Car(make, year, color) {
+    this.make = make;
+    this.year = year;
+    this.color = color;
+}
 
+Car.prototype.description = function () {
+    console.log(`This is a ${this.year} ${this.make} and it is ${this.color}`);
+}
 
+const car1 = new Car('Honda', 2018, "gray");
+const car2 = new Car('Toyota', 2000, "silver");
+
+car1.description();
+car2.description(); 
 // Principle 4
 
 // code example for Explicit Binding
